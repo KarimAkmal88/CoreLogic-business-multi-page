@@ -7,12 +7,12 @@
 
 /* 2. Style Variables */
 :root {
-  --bg-color: #282427;
+  --bg-color: #151226;
   --secondary-bg: #322f31;
   --accent-copper: #C08B5C;
   --accent-teal: #1D4E5F;
   --accent-terracotta: #bc5d41;
-  --text-color: #DABA7B;
+  --text-color: #F5D188;
   --heading-font: 'Roboto Slab', sans-serif;
   --body-font: 'Open Sans', sans-serif;
 }
@@ -45,8 +45,8 @@ img {
 body {
     display: grid;
     grid-template-areas: "header header"
-                         "hero hero"
-                         "ceo mission"
+                         "ceo ceo"
+                         "ceo ceo"
                          "footer footer";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -66,6 +66,7 @@ header img {
     height: auto;
     border: 1px solid var(--secondary-bg);
     border-radius: 18px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
 }
 header nav {
     width: 100%;
@@ -94,4 +95,129 @@ header nav ul li a {
 header nav ul li a:hover {
     transform: scale(1.3);
     color: var(--accent-terracotta);
+}
+main {
+    grid-area: ceo;
+    display: grid;
+    grid-template-areas: "hero hero"
+                         "ceo mission";
+    gap: 30px;                     
+}
+.hero-section {
+    grid-area: hero;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/home/home-hero.jpg') no-repeat center/cover;
+    height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+}
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+.hero-section-text {
+    text-align: center;
+    color: var(--text-color);
+}
+.home-left-section {
+    grid-area: ceo;
+    max-height: 420px;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 25px;
+    border-left: 1px solid var(--accent-terracotta);
+    transition: max-height 0.8s ease-in-out;
+    position: relative;
+    border-radius: 15px;
+}
+.home-left-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(transparent, var(--bg-color));
+    transition: 0.3s;
+}
+.read-more-btn {
+    grid-area: ceo; 
+    align-self: end; 
+    justify-self: start;
+    margin-top: 10px;
+    z-index: 10; 
+    cursor: pointer;
+}
+.read-more-btn::before {
+    content: "Read More";
+    display: inline-block;
+    color: var(--accent-copper);
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+#read-more-checker:checked + .home-left-section {
+    max-height: 3000px; 
+}    
+#read-more-checker:checked ~ .read-more-btn::before {
+    content: "Show Less";
+    color: var(--accent-terracotta);
+}
+#read-more-checker:checked + .home-left-section::after {
+    opacity: 0;
+}
+.home-right-section {
+    grid-area: mission;
+    padding: 20px;
+    margin-top: 25px;
+    border-left: 1px solid var(--accent-terracotta);
+    border-radius: 15px;
+}
+.home-right-section ol {
+    list-style: disc;
+}
+footer {
+    grid-area: footer;
+    justify-self: center;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+footer ul li {
+    display: block;
+    font-size: 2rem;
+}
+footer ul li a {
+    display: inline-block; 
+    color: var(--text-color); 
+    transition: all 0.3s ease;
+}
+footer ul li a:hover {
+    transform: scale(1.3);
+}
+footer ul li a .fa-facebook:hover { 
+    color: #1877F2;
+}
+footer ul li a .fa-x-twitter:hover {
+    color: #ffffff; 
+}
+footer ul li a .fa-square-linkedin:hover {
+    color: #0077B5;
+}
+footer ul li a .fa-youtube:hover {
+    color: #FF0000;
+}
+footer ul li a .fa-instagram:hover {
+    color: #E4405F;
 }
