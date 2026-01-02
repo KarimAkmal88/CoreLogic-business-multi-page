@@ -12,7 +12,7 @@
   --accent-copper: #C08B5C;
   --accent-teal: #1D4E5F;
   --accent-terracotta: #bc5d41;
-  --text-color: #F3E9D0;
+  --text-color: #DABA7B;
   --heading-font: 'Roboto Slab', sans-serif;
   --body-font: 'Open Sans', sans-serif;
 }
@@ -41,4 +41,57 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+body {
+    display: grid;
+    grid-template-areas: "header header"
+                         "hero hero"
+                         "ceo mission"
+                         "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 20px 30px;
+}
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    max-width: 250px;
+    height: auto;
+    border: 1px solid var(--secondary-bg);
+    border-radius: 18px;
+}
+header nav {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    padding: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+header nav ul li {
+    display: block;
+    margin-left: 50px;
+}
+header nav ul li a {
+    color: var(--text-color);
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+header nav ul li a:hover {
+    transform: scale(1.3);
+    color: var(--accent-terracotta);
 }
