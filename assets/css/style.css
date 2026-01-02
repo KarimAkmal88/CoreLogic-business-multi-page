@@ -1,0 +1,44 @@
+/* 1. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Style Variables */
+:root {
+  --bg-color: #282427;
+  --secondary-bg: #322f31;
+  --accent-copper: #C08B5C;
+  --accent-teal: #1D4E5F;
+  --accent-terracotta: #bc5d41;
+  --text-color: #F3E9D0;
+  --heading-font: 'Roboto Slab', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* 3. Main Body Setup */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 4. Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--accent-copper);
+}
+/* 5. Basic Elements Reset */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
