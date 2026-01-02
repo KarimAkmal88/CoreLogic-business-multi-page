@@ -66,6 +66,7 @@ header {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 header img {
   max-width: 250px;
@@ -76,18 +77,22 @@ header img {
 }
 header nav {
   width: 100%;
-  height: 100%;
-  align-content: center;
+  height: 330px;
   padding: 50px;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  left: 0;
 }
 header nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
+  border: 1px solid var(--secondary-bg);
+  border-radius: 18px;
+  padding: 20px 30px;
+  box-shadow: 0px 18px 18px 0px rgba(0, 0, 0, 0.5);
 }
 header nav ul li {
   display: block;
@@ -130,9 +135,12 @@ main {
   text-align: center;
   color: var(--text-color);
 }
+.statement h2 {
+  margin-bottom: 20px;
+}
 .home-left-section {
   grid-area: ceo;
-  max-height: 420px;
+  max-height: 480px;
   overflow: hidden;
   padding: 20px;
   margin-top: 25px;
@@ -154,7 +162,7 @@ main {
 .read-more-btn {
   grid-area: ceo;
   align-self: end;
-  justify-self: start;
+  justify-self: center;
   margin-top: 10px;
   z-index: 10;
   cursor: pointer;
@@ -186,12 +194,23 @@ main {
   border-left: 1px solid var(--accent-terracotta);
   border-radius: 15px;
 }
+.commitment h2 {
+  margin-bottom: 20px;
+}
 .home-right-section ol {
   list-style: disc;
+  list-style-position: inside;
+}
+.header-align {
+  margin-top: 20px;
 }
 footer {
   grid-area: footer;
   justify-self: center;
+  margin-top: 25px;
+}
+footer p {
+  font-size: 0.8rem;
 }
 footer ul {
   list-style: none;
@@ -199,7 +218,7 @@ footer ul {
   flex-direction: row;
   justify-content: center;
   gap: 30px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 footer ul li {
   display: block;
