@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body class="contact-page">
     <header>
       <img
         src="assets/images/home/logo.png"
@@ -40,11 +40,12 @@
     <main>
       <section class="contact-hero">
         <div class="contact-hero-section">
-          <img src="assets/images/contact/map.png" alt="Satellite Image" />
-        </div>
         <div class="satellite-overlay">
+          <div class="contact-hero-text">
           <h1>Get In Touch</h1>
           <p>Let's build the future together.</p>
+          </div>
+        </div>
         </div>
       </section>
       <section class="contact-content">
@@ -52,7 +53,7 @@
           <form action="#">
             <input type="text" placeholder="Full Name" required />
             <input type="email" placeholder="Business Email" required />
-            <input type="number" placeholder="Phone Number" required />
+            <input type="tel" placeholder="Phone Number" required />
             <select name="service" id="service">
               <option value="">Select Service</option>
               <option value="technical">Technical Office</option>
