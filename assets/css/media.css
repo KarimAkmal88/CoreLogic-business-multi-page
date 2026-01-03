@@ -110,23 +110,24 @@
     .contact-form-container, .contact-info {
         width: 100%;
     }
-    .about-page {
-        grid-template-columns: 1fr; 
-        padding: 10px;
-    }
     .about-page main {
-        padding: 20px 15px; 
-        width: 100%;
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr);
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 20px 15px;
+        gap: 40px;
     }
+
     .partners-container {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr) !important; 
         gap: 15px;
+        width: 100%;
     }
+
     .history-left, .partners-mid, .profile-right {
-        padding: 10px 0;
-        text-align: center; 
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center;
+        width: 100%;
     }
     .project-item figcaption h3 {
     opacity: 1;
