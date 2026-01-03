@@ -146,13 +146,29 @@
   font-size: 0.85rem;
 }
 /* -- fixing about-page -- */
-.about-page, .about-page main {
-        overflow-x: hidden !important;
-        width: 100% !important;
+.about-page {
         grid-template-columns: 1fr; 
         padding: 10px;
     }
-    .partners-container {
-         gap: 10px !important;
+    .about-page main {
+        padding: 20px 15px; 
+        width: 100%;
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
     }
+    .partners-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+    }
+    .history-left, .partners-mid, .profile-right {
+        padding: 10px 0;
+        text-align: center; 
+    }
+    .project-item figcaption h3 {
+    opacity: 1;
+    padding: 10px 5px;
+}
+.project-item figcaption p {
+    opacity: 1;
+}
 }    
