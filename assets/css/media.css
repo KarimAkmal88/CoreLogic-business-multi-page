@@ -145,4 +145,14 @@
 .about-page footer p {
   font-size: 0.85rem;
 }
+/* -- fixing about-page -- */
+.about-page, .about-page main {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        grid-template-columns: 1fr; 
+        padding: 10px;
+    }
+    .partners-container {
+         gap: 10px !important;
+    }
 }    
